@@ -14,7 +14,7 @@
     overflow: hidden;
 }
 
-/* Background & Atmosphere */
+
 .about-section::before {
     content: '';
     position: absolute;
