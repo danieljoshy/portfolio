@@ -1,4 +1,4 @@
-/* ================= PREMIUM ABOUT SECTION ================= */
+/* ================= PREMIUM ABOUT SECTION (CENTERED) ================= */
 
 .about-section {
     position: relative;
@@ -6,20 +6,20 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    /* Left aligned on desktop */
+    justify-content: center;
+    /* Center aligned */
     padding: 0 10vw;
-    /* Significant side padding */
     z-index: 10;
     overflow: hidden;
 }
 
-
+/* Background & Atmosphere */
 .about-section::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 30% 50%, rgba(20, 20, 20, 0.4), #000 80%);
+    background: radial-gradient(circle at 50% 50%, rgba(20, 20, 20, 0.4), #000 80%);
+    /* Centered radial */
     z-index: -2;
 }
 
@@ -31,12 +31,11 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.6;
-    /* Higher contrast */
     z-index: -1;
     filter: grayscale(100%) contrast(1.1) brightness(0.7);
     pointer-events: none;
 
-    /* Gradient Masks for cinematic fade */
+    /* Gradient Masks */
     mask-image: linear-gradient(to bottom,
             transparent 0%,
             black 15%,
@@ -54,11 +53,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    /* Left align items */
-    text-align: left;
-    /* Left align text */
-    max-width: 650px;
+    align-items: center;
+    /* Center align items */
+    text-align: center;
+    /* Center align text */
+    max-width: 700px;
     width: 100%;
 }
 
@@ -66,9 +65,7 @@
 .section-title {
     font-family: 'Outfit', sans-serif;
     font-weight: 200;
-    /* Thin ultra-modern weight */
     font-size: 4rem;
-    /* Large but not overwhelming */
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #ffffff;
@@ -95,13 +92,11 @@
 /* Glass Bio Card */
 .glass-bio-card {
     background: rgba(10, 10, 10, 0.4);
-    /* Darker glass for contrast */
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
 
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-top: 1px solid rgba(255, 255, 255, 0.12);
-    /* Subtle top highlight */
     border-radius: 24px;
 
     padding: 40px;
@@ -113,6 +108,7 @@
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
         box-shadow 0.4s ease,
         border-color 0.4s ease;
+    width: 100%;
 }
 
 .glass-bio-card:hover {
@@ -132,21 +128,14 @@
     font-weight: 300;
     margin: 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    /* Explicitly centered text */
 }
 
 /* ================= RESPONSIVE DESIGN ================= */
 @media (max-width: 900px) {
     .about-section {
-        justify-content: center;
-        /* Center on mobile/tablet */
         padding: 0 5vw;
-    }
-
-    .content-wrapper {
-        align-items: center;
-        /* Center items */
-        text-align: center;
-        /* Center text */
     }
 
     .section-title {
@@ -158,7 +147,6 @@
     .glass-bio-card {
         padding: 30px;
         background: rgba(15, 15, 15, 0.6);
-        /* Slightly more opaque on mobile */
     }
 
     .glass-bio-card p {
